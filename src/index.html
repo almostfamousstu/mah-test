@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Automation Hub</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="logo">Micro Automation Hub</div>
+      <nav class="nav">
+        <a href="#/automations" data-route="automations" class="nav-link active">Automations</a>
+        <a href="#/maru-portal" data-route="maru-portal" class="nav-link">Developer Portal</a>
+        <a href="#/insights" data-route="insights" class="nav-link">Insights</a>
+        <a href="#/roadmap" data-route="roadmap" class="nav-link">Roadmap</a>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section id="automations" class="view active">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Route: /automations</p>
+            <h1>Micro-Automations</h1>
+            <p class="subtitle">Discover, launch, and monitor curated micro-automations across the enterprise.</p>
+          </div>
+          <div class="actions">
+            <button class="btn primary">Create Run</button>
+            <button class="btn ghost">Export Logs</button>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Curated Workflows</p>
+                <h2>Approved & Deployed</h2>
+              </div>
+              <div class="pill">Library</div>
+            </div>
+            <div class="card-body" id="workflow-list"></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Run History</p>
+                <h2>Latest executions</h2>
+              </div>
+              <div class="pill">Logs</div>
+            </div>
+            <div class="timeline" id="history-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="maru-portal" class="view">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Route: /maru-portal</p>
+            <h1>Developer Portal</h1>
+            <p class="subtitle">Onboard new micro-automations and track their lifecycle with built-in guardrails.</p>
+          </div>
+          <div class="actions">
+            <button class="btn primary">Start Onboarding</button>
+            <button class="btn ghost">View Templates</button>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Developer Onboarding</p>
+                <h2>Guides & Checklists</h2>
+              </div>
+              <div class="pill">Enablement</div>
+            </div>
+            <div class="list" id="onboarding-list"></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Project Management</p>
+                <h2>Lifecycle tracker</h2>
+              </div>
+              <div class="pill">Delivery</div>
+            </div>
+            <div class="list" id="project-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="insights" class="view">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Route: /insights</p>
+            <h1>Insights & Telemetry</h1>
+            <p class="subtitle">Monitor adoption, performance, and value realization in one place.</p>
+          </div>
+          <div class="actions">
+            <button class="btn ghost">Download KPI CSV</button>
+          </div>
+        </div>
+
+        <div class="grid three" id="kpi-cards"></div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Adoption</p>
+                <h2>Top users</h2>
+              </div>
+              <div class="pill">Engagement</div>
+            </div>
+            <table class="table" id="adoption-table"></table>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Value Realization</p>
+                <h2>Leaderboard</h2>
+              </div>
+              <div class="pill">Impact</div>
+            </div>
+            <table class="table" id="value-table"></table>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="view">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">Route: /roadmap</p>
+            <h1>Roadmap</h1>
+            <p class="subtitle">See what is shipping next and influence priorities with feedback.</p>
+          </div>
+          <div class="actions">
+            <button class="btn primary">Submit Feedback</button>
+            <button class="btn ghost">Export Roadmap</button>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Upcoming Features</p>
+                <h2>Next 90 days</h2>
+              </div>
+              <div class="pill">Planned</div>
+            </div>
+            <div class="list" id="upcoming-list"></div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Feedback Backlog</p>
+                <h2>Vote & prioritize</h2>
+              </div>
+              <div class="pill">Community</div>
+            </div>
+            <div class="list" id="feedback-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
