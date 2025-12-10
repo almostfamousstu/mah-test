@@ -1,0 +1,12 @@
+{
+  "name": "micro-automation-hub",
+  "version": "1.0.0",
+  "description": "Micro Automation Hub static SPA",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node server.js",
+    "start": "npm run build && node server.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
